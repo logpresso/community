@@ -1,0 +1,3 @@
+hive-file $("path")
+| search key == "*SimonTatham\\PuTTY\\Sessions*" and name == "HostName"
+| fields key, name, value, last_written
