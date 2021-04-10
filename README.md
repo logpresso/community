@@ -13,8 +13,8 @@ Logpresso Mini is minimized single binary command-line tool of Logpresso platfor
 Logpresso Mini is very powerful because it can sort and aggregate any data, and can join not only local file but also remote data. e.g. web pages.
 
 ### Download
-* [Logpresso Mini 1.0.0 (Windows x64)](https://github.com/logpresso/community/releases/download/v1.0.0/logpresso.exe)
-* [Logpresso Mini 1.0.0 (Linux x64)](https://github.com/logpresso/community/releases/download/v1.0.0/logpresso)
+* Logpresso Mini 1.0.0 (Windows x64)
+* Logpresso Mini 1.0.0 (Linux x64)
 
 ### Getting Started
 You can see basic usage using `-h` option.
@@ -23,6 +23,7 @@ CMD> logpresso -h
 usage: logpresso [option] [arg]
 Options and arguments
 -d key=value : define query parameter
+-p port      : open udp syslog port and use socket as stdin
 -q query     : query string passed in as string (terminates option list)
 file         : query string read from file
 ```
@@ -71,7 +72,7 @@ You can find failed ssh login attempts like this:
 {"line":"Apr  9 18:02:12 wood sudo: pam_unix(sudo:auth): authentication failure; logname=xeraph uid=16777220 euid=0 tty=/dev/pts/0 ruser=xeraph rhost=  user=xeraph"}
 ```
 
-You can aggregates failed ssh login attempts per username like this:
+You can aggregate failed ssh login attempts per username like this:
 ```
 # logpresso -q 'textfile /var/log/secure | search line == "*authentication failure*" | rex field=line "user=(?<user>\S+)" | stats count by user'
 {"count":4,"user":"8con"}
@@ -79,11 +80,12 @@ You can aggregates failed ssh login attempts per username like this:
 ```
 
 ### Contents
- * How to find deleted files from MFT
- * How to find connected USB devices from registry hive files
+ * [How to find deleted files from MFT](https://github.com/logpresso/community/blob/main/contents/001_How_to_analyze_NTFS_MFT.md)
+ * [How to build file deletion trend over time from UsnJrnl](https://github.com/logpresso/community/blob/main/contents/002_How_to_analyze_NTFS_UsnJrnl.md)
+ * [How to find connected USB devices from registry hive files](https://github.com/logpresso/community/blob/main/contents/003_How_to_analyze_Registry.md)
 
 ### Log parser
-Logpresso mini embeds 40+ log parsers for commercial security products. However, parser may not work correctly since log format is ever changing over time. In case of this, you can support Logpresso team by contributing log samples. Please create an issue and describe product name, firmware version, and upload log file.
+Logpresso Mini embeds 40+ log parsers for commercial security products. However, parser may not work correctly since log format is ever changing over time. In case of this, you can support Logpresso team by contributing log samples. Please create an issue and describe product name, firmware version, and upload log file.
 
 Following log formats are supported:
 * Common Log Formats

@@ -18,7 +18,8 @@ Most administrators use MSRDP (remote desktop protocol) to connect to a remote w
 
 ```
 logpresso> hive-file NTUSER.DAT \
-.. | search key == "*Terminal Server Client*" and name == "*MRU*" | fields name, value, last_written
+.. | search key == "*Terminal Server Client*" and name == "*MRU*" \
+.. | fields name, value, last_written
 {"name":"MRU0","last_written":"2020-02-06 17:32:23+0900","value":"172.20.36.13"}
 {"name":"MRU1","last_written":"2020-02-06 17:32:23+0900","value":"172.20.xx.xx"}
 {"name":"MRU2","last_written":"2020-02-06 17:32:23+0900","value":"172.20.xx.xx"}
@@ -124,8 +125,10 @@ Filter records by `USB` and extract fields using regular expression.
 logpresso> hive-file codegate2011\system.bak \
 .. | search key == "*MountedDevices" and name == "\\DosDevices*" \
 .. | eval value = substr(decode(value, "UTF-16LE"), 4) \
-.. | search value == "*USB*" | rex field=value "Ven_(?<vendor>[^&]+)&Prod_(?<product>[^&]+)&Rev_(?<version>[^#]+)#(?<serial>[^&]+)" \
-.. | eval serial = lower(serial) | fields vendor, product, version, serial
+.. | search value == "*USB*" \
+.. | rex field=value "Ven_(?<vendor>[^&]+)&Prod_(?<product>[^&]+)&Rev_(?<version>[^#]+)#(?<serial>[^&]+)" \
+.. | eval serial = lower(serial) \
+.. | fields vendor, product, version, serial
 {"product":"UFD","serial":"ddf08fb7a86075","vendor":"Corsair","version":"0.00"}
 {"product":"U3_Cruzer_Micro","serial":"0000156059605a5c","vendor":"SanDisk","version":"2.18"}
 {"product":"SWING_MINI","serial":"sfa0711000057f","vendor":"SELFIC","version":"0.1A"}
