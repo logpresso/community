@@ -1,6 +1,6 @@
 ## How to analyze Firewall logs
 
-In most environments, firewall controls north-south traffic. Well-designed network also deploys Anti-DDoS, IPS, WAF (Web Application Firewall). Every firewall supports session (or flow) logging via syslog, snmp, or REST API.
+In most environments, firewall controls north-south traffic. Every firewall supports session (or flow) logging via syslog, snmp, or REST API.
 
 Although each firewall product has its own characteristics, but there are common logging elements. All flow records contains standard 5-tuple:
 * Source IP
@@ -11,7 +11,7 @@ Although each firewall product has its own characteristics, but there are common
 
 In addition to these fields, there are some especially useful metadata:
 
-* Application: L7 protocol (e.g. HTTP, DNS) or web service name
+* Application: NGFW provides L7 protocol (e.g. HTTP, DNS) or web service name
 * Action: PERMIT, DENY or DROP
   * `DENY` means TCP RST response, `DROP` means packet drop (client may suffer long timeout)
 * Sent bytes: Bytes transferred from client to server
@@ -57,12 +57,12 @@ CMD> logpresso -p 514 -q "- | outputtxt fw.log line"
 
 Press Ctrl-C to terminate. Now check how many logs are received.
 
-### Understanding destinations
-
 ```
 CMD> logpresso -q "textfile fw.log | stats count"
 {"count":100}
 ```
+
+### Understanding destinations
 
 Altough you can parse this log format using regular expression or combination of string functions, Logpresso Mini embeds log parsers for well-known security products. Since these logs are sent by Cisco Firepower, you can use `firepower` parser.
 
