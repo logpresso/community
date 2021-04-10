@@ -13,8 +13,8 @@ Logpresso Mini is minimized single binary command-line tool of Logpresso platfor
 Logpresso Mini is very powerful because it can sort and aggregate any data, and can join not only local file but also remote data. e.g. web pages.
 
 ### Download
-* [Logpresso Mini 1.0.0 (Windows x64)](https://github.com/logpresso/community/releases/download/v1.0.0/logpresso.exe)
-* [Logpresso Mini 1.0.0 (Linux x64)](https://github.com/logpresso/community/releases/download/v1.0.0/logpresso)
+* [Logpresso Mini 1.0.0 (Windows x64)](https://github.com/logpresso/community/releases/download/v1.0.0/logpresso.exe.zip)
+* [Logpresso Mini 1.0.0 (Linux x64)](https://github.com/logpresso/community/releases/download/v1.0.0/logpresso.tar.gz)
 
 ### Getting Started
 You can see basic usage using `-h` option.
@@ -64,7 +64,7 @@ You can find failed ssh login attempts like this:
 {"line":"Apr  6 11:43:26 wood sshd[23029]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=172.20.1.xx  user=8con"}
 {"line":"Apr  6 11:43:40 wood sudo: pam_unix(sudo:auth): authentication failure; logname=8con uid=16777216 euid=0 tty=/dev/pts/0 ruser=8con rhost=  user=8con"}
 {"line":"Apr  6 14:47:45 wood sshd[23029]: PAM 1 more authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=172.20.1.xx  user=8con"}
-{"line":"Apr  6 18:00:09 wood sshd[3109]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=172.20.29.xx  user=8con"}
+{"line":"Apr  6 18:00:09 wood sshd[3109]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhos====t=172.20.29.xx  user=8con"}
 {"line":"Apr  8 20:41:26 wood sshd[21866]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=xeraph.hq.logpresso.net  user=xeraph"}
 {"line":"Apr  8 20:41:31 wood sshd[21897]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=xeraph.hq.logpresso.net  user=xeraph"}
 {"line":"Apr  9 17:56:12 wood sshd[13484]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=xeraph.hq.logpresso.net  user=xeraph"}
@@ -83,6 +83,8 @@ You can aggregate failed ssh login attempts per username like this:
  * [How to find deleted files from MFT](https://github.com/logpresso/community/blob/main/contents/001_How_to_analyze_NTFS_MFT.md)
  * [How to build file deletion trend over time from UsnJrnl](https://github.com/logpresso/community/blob/main/contents/002_How_to_analyze_NTFS_UsnJrnl.md)
  * [How to find connected USB devices from registry hive files](https://github.com/logpresso/community/blob/main/contents/003_How_to_analyze_Registry.md)
+ * [How to detect defense evasion using BITS jobs](https://github.com/logpresso/community/blob/main/contents/004_How_to_analyze_Windows_Event_Logs.md)
+
 
 ### Log parser
 Logpresso Mini embeds 40+ log parsers for commercial security products. However, parser may not work correctly since log format is ever changing over time. In case of this, you can support Logpresso team by contributing log samples. Please create an issue and describe product name, firmware version, and upload log file.
