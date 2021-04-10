@@ -58,7 +58,7 @@ hive-file $("path")
 You can reuse query file like this:
 
 ```
-CMD> logpresso -d path=NTUSER.DAT -f putty.lq
+CMD> logpresso -d path=NTUSER.DAT putty.lq
 {"name":"MRU0","last_written":"2020-02-06 17:32:23+0900","value":"172.20.36.13"}
 {"name":"MRU1","last_written":"2020-02-06 17:32:23+0900","value":"172.20.xx.xx"}
 {"name":"MRU2","last_written":"2020-02-06 17:32:23+0900","value":"172.20.xx.xx"}
