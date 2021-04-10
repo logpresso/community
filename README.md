@@ -13,8 +13,8 @@ Logpresso Mini is minimized single binary command-line tool of Logpresso platfor
 Logpresso Mini is very powerful because it can sort and aggregate any data, and can join not only local file but also remote data. e.g. web pages.
 
 ### Download
-* Logpresso Mini 1.0.0 (Windows x64)
-* Logpresso Mini 1.0.0 (Linux x64)
+* [Logpresso Mini 1.0.0 (Windows x64)](https://github.com/logpresso/community/releases/download/v1.0.0/logpresso.exe)
+* [Logpresso Mini 1.0.0 (Linux x64)]()
 
 ### Getting Started
 You can see basic usage using `-h` option.
@@ -97,7 +97,7 @@ Following log formats are supported:
   * paloalto: Palo Alto Networks NGFW
   * fortigate: Fortinet UTM
   * cyberoam: Cyberoam UTM
-  * sonicwall: SonicWal NGFW
+  * sonicwall: SonicWall NGFW
   * watchguard: WatchGuard Firebox firewall
   * netscreen-isg: Juniper Netscreen firewall
   * darktrace: Darktrace Enterprise Immune System
