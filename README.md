@@ -24,6 +24,7 @@ usage: logpresso [option] [arg]
 Options and arguments
 -d key=value : define query parameter
 -p port      : open udp syslog port and use socket as stdin
+-g path      : specify geolite2 database path for geoip lookup
 -q query     : query string passed in as string (terminates option list)
 file         : query string read from file
 ```
@@ -84,7 +85,7 @@ You can aggregate failed ssh login attempts per username like this:
  * [How to build file deletion trend over time from UsnJrnl](https://github.com/logpresso/community/blob/main/contents/002_How_to_analyze_NTFS_UsnJrnl.md)
  * [How to find connected USB devices from registry hive files](https://github.com/logpresso/community/blob/main/contents/003_How_to_analyze_Registry.md)
  * [How to detect defense evasion using BITS jobs](https://github.com/logpresso/community/blob/main/contents/004_How_to_analyze_Windows_Event_Logs.md)
-
+ * [How to analyze Firewall logs](https://github.com/logpresso/community/blob/main/contents/005_How_to_analyze_Firewall_Logs.md)
 
 ### Log parser
 Logpresso Mini embeds 40+ log parsers for commercial security products. However, parser may not work correctly since log format is ever changing over time. In case of this, you can support Logpresso team by contributing log samples. Please create an issue and describe product name, firmware version, and upload log file.
@@ -98,6 +99,7 @@ Following log formats are supported:
 * Global products
   * paloalto: Palo Alto Networks NGFW
   * fortigate: Fortinet UTM
+  * firepower: Cisco Firepower NGFW
   * cyberoam: Cyberoam UTM
   * sonicwall: SonicWall NGFW
   * watchguard: WatchGuard Firebox firewall
