@@ -1,4 +1,4 @@
-# Logpresso Mini
+![Logpresso Mini Logo](logo.png)
 
 Logpresso Mini is minimized single binary command-line tool of Logpresso platform. You can analyze various security logs and forensic artifacts. For example,
 
