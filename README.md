@@ -2,6 +2,7 @@
 
 Logpresso Mini is minimized single binary command-line tool of Logpresso platform. You can analyze various security logs and forensic artifacts. For example,
 
+ * Parse browser history logs of Internet Explorer, Chrome, Firefox.
  * Parse the NTFS MFT file from an NTFS filesystem, and find deleted file or hidden files.
  * Parse windows .evtx files and find suspicious powershell command executions.
  * Parse registry hive files and find history of every connected USB devices.
@@ -84,11 +85,13 @@ You can aggregate failed ssh login attempts per username like this:
 ```
 
 ### Contents
+ * [How to analyze Internet Explorer 10, 11](https://github.com/logpresso/community/blob/main/contents/006_How_to_analyze_Internet_Explorer_Logs.md)
  * [How to find deleted files from MFT](https://github.com/logpresso/community/blob/main/contents/001_How_to_analyze_NTFS_MFT.md)
  * [How to build file deletion trend over time from UsnJrnl](https://github.com/logpresso/community/blob/main/contents/002_How_to_analyze_NTFS_UsnJrnl.md)
  * [How to find connected USB devices from registry hive files](https://github.com/logpresso/community/blob/main/contents/003_How_to_analyze_Registry.md)
  * [How to detect defense evasion using BITS jobs](https://github.com/logpresso/community/blob/main/contents/004_How_to_analyze_Windows_Event_Logs.md)
  * [How to analyze Firewall logs](https://github.com/logpresso/community/blob/main/contents/005_How_to_analyze_Firewall_Logs.md)
+
 
 ### Log parser
 Logpresso Mini embeds 40+ log parsers for commercial security products. However, parser may not work correctly since log format is ever changing over time. In case of this, you can support Logpresso team by contributing log samples. Please create an issue and describe product name, firmware version, and upload log file.
