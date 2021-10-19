@@ -2,7 +2,7 @@
 
 Logpresso Mini is minimized single binary command-line tool of Logpresso platform. You can analyze various security logs and forensic artifacts. For example,
 
- * Parse browser history logs of Internet Explorer, Chrome, Firefox.
+ * Parse browser history logs of Internet Explorer, Chrome, and Firefox.
  * Parse the NTFS MFT file from an NTFS filesystem, and find deleted file or hidden files.
  * Parse windows .evtx files and find suspicious powershell command executions.
  * Parse registry hive files and find history of every connected USB devices.
@@ -17,8 +17,8 @@ Logpresso Mini is very powerful because it can sort and aggregate any data, and 
 
 If you download or install this software (the "Logpresso Mini" or "Mini Package") on your own device and/or equipment, you shall be deemed to have explicitly agreed to the EULA. You shall find and check the EULA of the Logpresso Mini before you download and unpackage the Logpresso Mini, which can be founded within the package you downloaded and the page where you download the package. 
 
-* [Logpresso Mini 1.0.0 (Windows x64)](https://github.com/logpresso/community/releases/download/v1.0.0/logpresso.exe.7z)
-* [Logpresso Mini 1.0.0 (Linux x64)](https://github.com/logpresso/community/releases/download/v1.0.0/logpresso.tar.gz)
+* [Logpresso Mini 1.1.0 (Windows x64)](https://github.com/logpresso/community/releases/download/v1.1.0/logpresso-mini-1.1.0-win64.7z)
+* [Logpresso Mini 1.1.0 (Linux x64)](https://github.com/logpresso/community/releases/download/v1.1.0/logpresso-mini-1.1.0-linux.tar.gz)
 
 ### Getting Started
 You can see basic usage using `-h` option.
